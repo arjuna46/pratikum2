@@ -1,9 +1,11 @@
-PRAKTIKUM 8
+##PRAKTIKUM 8
+
 NilaiMahasiswa Class
 Overview
 The NilaiMahasiswa class is a simple Python class designed to manage and manipulate student data, specifically their names and corresponding grades. The class provides functionality to add, display, update, and delete student records.
 
-Class Methods
+##Class Methods
+
 __init__(self) -> None
 Initializes an instance of the class with an empty dictionary to store student data.
 tambah(self, nama: str, nilai: int) -> str
@@ -18,25 +20,27 @@ Returns a success message if the student is deleted, or an error message if the 
 ubah(self, nama: str, nilai: int) -> str
 Updates the grade of an existing student with the provided name (nama) to the new grade (nilai).
 Returns a success message if the update is successful, or an error message if the student is not found.
-Example Usage
+
+##Example Usage
+
 # Creating an instance of the NilaiMahasiswa class
 nilai_mahasiswa = NilaiMahasiswa()
 
 # Adding students with their grades
-print(nilai_mahasiswa.tambah("Maul", 90))
-print(nilai_mahasiswa.tambah("Lana", 100))
-print(nilai_mahasiswa.tambah("Lynn", 100))
+print(nilai_mahasiswa.tambah("Junn", 85))
+print(nilai_mahasiswa.tambah("Arjun", 95))
+print(nilai_mahasiswa.tambah("Juna", 78))
 
 # Displaying the list of students and grades
 print(nilai_mahasiswa.tampilkan())
 
 # Updating the grade for an existing student
-print(nilai_mahasiswa.ubah("Maul", 100))
+print(nilai_mahasiswa.ubah("Arjun", 95))
 
 # Deleting a student
-print(nilai_mahasiswa.hapus("Lana"))
+print(nilai_mahasiswa.hapus("Junn"))
 
-# Displaying the updated list of students and grades
+## Displaying the updated list of students and grades
 print(nilai_mahasiswa.tampilkan())
 Notes
 Ensure that the provided name (nama) is a string, and the grade (nilai) is an integer when using the tambah, hapus, and ubah methods.
