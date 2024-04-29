@@ -33,13 +33,13 @@ insert into Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos
 -> (11223349,"anton sinaga","laki-laki","1988-03-10","","Cikarang","","","");
 ```
 
-![alt text](ss/11.png)
+
 
 **2. Menampilkan semua isi/record pada tabel bisa menggunakan kode berikut :**
 
 `select*from Mahasiswa;`
 
-![alt text](ss/12.png)
+
 
 **3. Mengubah data tanggal lahir Mahasiswa yang bernama Ari menjadi : 1979-08-31 menggunakan kode berikut :**
 
@@ -51,25 +51,24 @@ insert into Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos
 
 `select*from Mahasiswa where nim=11223344;`
 
-![alt text](ss/14.png)
+
 
 **5. Menghapus Mahasiswa yang bernama Dina dengan cara sebagai berikut:**
 
 `delete from Mahasiswa where nim=11223346;`
 
-![alt text](ss/15.png)
+
 
 **6. Menampilkan record atau data yang tanggal kelahirannya lebih dari atau sama dengan 1996-1-2 dengan cara sebagai berikut :**
 
 `select*from Mahasiswa where tgl_lahir<='1996-1-2';`
 
-![alt text](ss/16.png)
+
 
 **7. Menampilkan semua Mahasiswa yang berasal dari Bekasi dan berjenis kelamin perempuan dengan cara sebagai berikut :**
 
 `select*from Mahasiswa where kota='bekasi' and jenis_kelamin='Perempuan';`
 
-![alt text](ss/17.png)
 
 **8. Menampilkan semua Mahasiswa yang berasal dari Bekasi dengan kelamin laki-laki atau Mahasiswa yang berumur lebih dari 22 tahun dengan kelamin wanita dengan cara sebagai berikut :**
 ```
@@ -78,19 +77,18 @@ or tgl_lahir<='2002-4-22'
 and jenis_kelamin='Perempuan';
 ```
 
-![alt text](ss/18.png)
+
 
 **9. Menampilkan data nama dan jalan Mahasiswa saja dari tabel tersebut dengan cara sebagai berikut :**
 
 `select nama, jalan from Mahasiswa;`
 
-![alt text](ss/19.png)
 
 **10. Menampilkan data Mahasiswa terurut berdasarkan nama dengan cara sebagai berikut :**
 
 `select*from Mahasiswa -> order by nama asc;`
 
-![alt text](ss/20.png)
+
 
 # Evaluasi dan Pertanyaan
 
@@ -105,7 +103,7 @@ and jenis_kelamin='Perempuan';
 `INSERT INTO biodata (nim, nama, alamat) VALUE ('312310451','fadzar','Bekasi'),
 ('312310487', 'thanos sinaga', 'Jakarta');
 
-![alt text](ss/21.png)
+
 
 **2. Menampilkan data :**
 
@@ -115,7 +113,7 @@ and jenis_kelamin='Perempuan';
 
 `SELECT*FROM biodata;`
 
-![alt text](ss/22.png)
+
 
 **3. Mengubah data :**
 
