@@ -1,55 +1,122 @@
-# PRAKTIKUM 8
+# PRAKTIKUM 2
 
-NilaiMahasiswa Class
-Overview
-The NilaiMahasiswa class is a simple Python class designed to manage and manipulate student data, specifically their names and corresponding grades. The class provides functionality to add, display, update, and delete student records.
+# Soal Latihan Praktikum
 
-# Class Methods
+Berdasarkan table Mahasiswa pada praktikum sebelumnya: (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds)
 
-__init__(self) -> None
-Initializes an instance of the class with an empty dictionary to store student data.
-tambah(self, nama: str, nilai: int) -> str
-Adds a new student to the records with the given name (nama) and grade (nilai).
-Returns a success message if the student is added, or an error message if the student already exists.
-tampilkan(self) -> str
-Displays the list of students and their corresponding grades.
-Returns a message indicating that there is no student data if the records are empty.
-hapus(self, nama: str) -> str
-Removes a student from the records based on the provided name (nama).
-Returns a success message if the student is deleted, or an error message if the student is not found.
-ubah(self, nama: str, nilai: int) -> str
-Updates the grade of an existing student with the provided name (nama) to the new grade (nilai).
-Returns a success message if the update is successful, or an error message if the student is not found.
+***Isi data pada table tersebut sebanyak minimal 5 record data. Tampilkan semua isi/record tabel!***
 
-# Example Usage
+- Ubah data tanggal lahir Mahasiswa yang bernama Ari menjadi: 1979-08-31!
 
-# Creating an instance of the NilaiMahasiswa class
-nilai_mahasiswa = NilaiMahasiswa()
+- Tampilkan satu baris / record data yang telah diubah tadi yaitu record dengan nama Ari saja!
 
-# Adding students with their grades
-print(nilai_mahasiswa.tambah("Junn", 85))
-print(nilai_mahasiswa.tambah("Arjun", 95))
-print(nilai_mahasiswa.tambah("Juna", 78))
+- Hapus Mahasiswa yang bernama Dina!
 
-# Displaying the list of students and grades
-print(nilai_mahasiswa.tampilkan())
+- Tampilkan record atau data yang tanggal kelahirannya lebih dari atau sama dengan 1996-1-2!
 
-# Updating the grade for an existing student
-print(nilai_mahasiswa.ubah("Arjun", 95))
+- Tampilkan semua Mahasiswa yang berasal dari Bekasi dan berjenis kelamin perempuan!
 
-# Deleting a student
-print(nilai_mahasiswa.hapus("Junn"))
+- Tampilkan semua Mahasiswa yang berasal dari Bekasi dengan kelamin laki-laki atau Mahasiswa yang berumur lebih dari 22 tahun dengan kelamin wanita!
 
-## Displaying the updated list of students and grades
-print(nilai_mahasiswa.tampilkan())
-Notes
-Ensure that the provided name (nama) is a string, and the grade (nilai) is an integer when using the tambah, hapus, and ubah methods.
-The class provides a basic template for managing student records and can be extended to include additional features based on specific requirements.
+- Tampilkan data nama dan alamat Mahasiswa saja dari tabel tersebut
 
-# Diagram
+- Tampilkan data Mahasiswa terurut berdasarkan nama.
 
-![WhatsApp Image 2023-12-12 at 21 26 30](https://github.com/arjuna46/pratikum7-8/assets/147571007/7efa5d71-f128-4575-bb9c-7eeaa1bcdd9e)
+**1. Mengisi tabel dengan minimal 5 record data :**
+```
+insert into Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds) values 
+-> (11223344,"ari santoso","Laki-laki","1998-10-12","","Bekasi","","",""), 
+-> (11223345,"ario talib","Laki-laki","1999-11-16","","Cikarang","","",""), 
+-> (11223346,"dina marlina","Perempuan","1997-12-01","","Karawang","","",""), 
+-> (11223347,"lisa ayu","perempuan","1996-01-02","","Bekasi","","",""), 
+-> (11223348,"tiara wahidah","perempuan","1980-02-05","","Bekasi","","",""), 
+-> (11223349,"anton sinaga","laki-laki","1988-03-10","","Cikarang","","","");
+```
 
-# Flowchart
+![alt text](ss/11.png)
 
-![Screenshot (69)](https://github.com/arjuna46/pratikum7-8/assets/147571007/2c624c03-96a4-4524-b823-86144481bc03)
+**2. Menampilkan semua isi/record pada tabel bisa menggunakan kode berikut :**
+
+`select*from Mahasiswa;`
+
+![alt text](ss/12.png)
+
+**3. Mengubah data tanggal lahir Mahasiswa yang bernama Ari menjadi : 1979-08-31 menggunakan kode berikut :**
+
+`update Mahasiswa set tgl_lahir='1979-08-31' where nim=11223344;`
+
+![alt text](ss/13.png)
+
+**4. Menampilkan satu baris / record data yang telah diubah tadi yaitu record dengan nama Ari saja dengan cara sebagai berikut :**
+
+`select*from Mahasiswa where nim=11223344;`
+
+![alt text](ss/14.png)
+
+**5. Menghapus Mahasiswa yang bernama Dina dengan cara sebagai berikut:**
+
+`delete from Mahasiswa where nim=11223346;`
+
+![alt text](ss/15.png)
+
+**6. Menampilkan record atau data yang tanggal kelahirannya lebih dari atau sama dengan 1996-1-2 dengan cara sebagai berikut :**
+
+`select*from Mahasiswa where tgl_lahir<='1996-1-2';`
+
+![alt text](ss/16.png)
+
+**7. Menampilkan semua Mahasiswa yang berasal dari Bekasi dan berjenis kelamin perempuan dengan cara sebagai berikut :**
+
+`select*from Mahasiswa where kota='bekasi' and jenis_kelamin='Perempuan';`
+
+![alt text](ss/17.png)
+
+**8. Menampilkan semua Mahasiswa yang berasal dari Bekasi dengan kelamin laki-laki atau Mahasiswa yang berumur lebih dari 22 tahun dengan kelamin wanita dengan cara sebagai berikut :**
+```
+select * from Mahasiswa where kota='Bekasi' and jenis_kelamin='Laki-laki' 
+or tgl_lahir<='2002-4-22' 
+and jenis_kelamin='Perempuan';
+```
+
+![alt text](ss/18.png)
+
+**9. Menampilkan data nama dan jalan Mahasiswa saja dari tabel tersebut dengan cara sebagai berikut :**
+
+`select nama, jalan from Mahasiswa;`
+
+![alt text](ss/19.png)
+
+**10. Menampilkan data Mahasiswa terurut berdasarkan nama dengan cara sebagai berikut :**
+
+`select*from Mahasiswa -> order by nama asc;`
+
+![alt text](ss/20.png)
+
+# Evaluasi dan Pertanyaan
+
+***Tulis semua perintah-perintah SQL percobaan di atas beserta outputnya!***
+
+**1. Menambah data :**
+
+`INSERT INTO <table> (field1, ..., fieldn) VALUE (value1, ..., valuen)`
+
+*Contoh :*
+
+`INSERT INTO biodata (nim, nama, alamat) VALUE ('312310451','fadzar','Bekasi'),
+('312310487', 'thanos sinaga', 'Jakarta');
+
+![alt text](ss/21.png)
+
+**2. Menampilkan data :**
+
+`SELECT * FROM <table> SELECT [field1, ..., fieldn] FROM <table>`
+
+*Contoh :*
+
+`SELECT*FROM biodata;`
+
+![alt text](ss/22.png)
+
+**3. Mengubah data :**
+
+`UPDATE <table> SET field1=val1, ..., fieldn=valn WHERE <kondisi>;`
