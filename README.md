@@ -45,7 +45,7 @@ insert into Mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos
 
 `update Mahasiswa set tgl_lahir='1979-08-31' where nim=11223344;`
 
-![alt text](ss/13.png)
+
 
 **4. Menampilkan satu baris / record data yang telah diubah tadi yaitu record dengan nama Ari saja dengan cara sebagai berikut :**
 
