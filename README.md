@@ -120,3 +120,13 @@ and jenis_kelamin='Perempuan';
 **3. Mengubah data :**
 
 `UPDATE <table> SET field1=val1, ..., fieldn=valn WHERE <kondisi>;`
+
+***Berikan kesimpulan anda!***
+
+Data Manipulation Language (DML) adalah bahasa pemrograman yang digunakan untuk mengakses, memanipulasi, dan mengelola data dalam sebuah database. DML memungkinkan pengguna untuk melakukan operasi seperti penyisipan data baru, pembaruan data yang sudah ada, penghapusan data, dan kueri data untuk pengambilan informasi yang diperlukan.
+
+Dalam DML, pengguna dapat menggunakan perintah SQL (Structured Query Language) untuk mengakses data. SQL adalah bahasa standar untuk mengakses dan mengelola data dalam database relasional. Perintah SQL yang digunakan dalam DML termasuk menambah, mengubah, menghapus, dan menampilkan data seperti yang telah dipraktekkan diatas.
+
+***Buat laporan praktikum yang berisi, langkah-langkah praktikum beserta screenshot yang sudah dilakukan dalam bentuk dokumen.***
+
+<img src=https://pngimg.com/uploads/google_drive/google_drive_PNG9.png width="110px" >
